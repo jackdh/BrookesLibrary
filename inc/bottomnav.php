@@ -10,13 +10,13 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li ><a href="./">Default <span class="sr-only">(current)</span>
+                <li ><a href="./">Home <span class="sr-only">(current)</span>
                     <span class="caret"></span>
                     </a></li>
-                <li><a href="./">Static top
+                <li><a href="./">Reservations
                     <span class="caret"></span>
                     </a></li>
-                <li><a href="./">Fixed top
+                <li><a href="./">Login
                     <span class="caret"></span>
                     </a></li>
             </ul>
