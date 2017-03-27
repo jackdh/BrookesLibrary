@@ -3,13 +3,14 @@ include '../inc/header.php';
 include 'singleBook.php';
 getHeader("<li><a href=\"/\">Home</a></li><li><a href=\"/search \">Search</a></li><li class=\"active\">Book Title</li>");
 
+
 ?>
 
     <div class="container" id="singleBook">
         <div class="row">
             <div class="col-md-9 col-md-push-3 central">
 
-                <?php getSingleBook(true); ?>
+                <?php isset($_GET['id']) ? getSingleBook($_GET['id']) : ""; ?>
 
 
 

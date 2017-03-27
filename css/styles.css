@@ -73,6 +73,10 @@ h1 {
 #search-page #search-container {
   margin-top: 49px; }
 
+.pagination-btn {
+  min-width: 100px;
+  margin-top: 20px; }
+
 .book-case {
   max-height: 670px;
   overflow: auto; }

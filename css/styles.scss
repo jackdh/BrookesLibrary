@@ -82,7 +82,11 @@ $break-min: 576px;
   padding-right: 15px;
 }
 
+
+
 // Sidebar
+
+
 
 #search-container {
 
@@ -120,6 +124,11 @@ $break-min: 576px;
   #search-container {
     margin-top: 49px;
   }
+}
+
+.pagination-btn {
+  min-width: 100px;
+  margin-top: 20px;
 }
 
 // Book

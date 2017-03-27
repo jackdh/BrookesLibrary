@@ -10,8 +10,14 @@
 
                 <h1>Your Reservations</h1>
                 <div class="border book-case">
-                    <?php getBook(true);?>
-                    <?php getBook(false);?>
+                    <?php
+                    $jsonurl = "../reservations.json";
+                    $json = file_get_contents($jsonurl,0,null,null);
+                    $json_output = json_decode($json);
+                    for ($i = 0; $i < sizeof($json_output); $i++) {
+                    getBook($json_output[$i], $i, true);
+                    }
+                    ?>
                 </div>
 
 
