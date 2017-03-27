@@ -77,5 +77,6 @@
 <script src="../node_modules/mustache/mustache.min.js"></script>
 <script src="../js/app.js"></script>
 <script src="../js/singlebook.js"></script>
+<script src="../js/addBook.js"></script>
 <script type="text/javascript" src="../js/rating.js"></script>
 </body>
