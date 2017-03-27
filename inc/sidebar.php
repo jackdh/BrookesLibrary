@@ -5,5 +5,5 @@
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
 </div>
-<a href="/Addbook/" type="button" class="add-book btn btn-primary btn-lg btn-block">Add Book</a>
-<button type="button" class="request-book btn btn-primary btn-lg btn-block">Request Book</button>
+<a href="/add-book/" type="button" class="add-book btn btn-primary btn-lg btn-block">Add Book</a>
+<a href="/request-book/" type="button" class="request-book btn btn-primary btn-lg btn-block">Request Book</a>
