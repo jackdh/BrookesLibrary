@@ -1,0 +1,15 @@
+{
+  "name": "brookes-library",
+  "version": "1.0.0",
+  "description": "University website for Oxford Brookes Module HCI",
+  "main": "index.php",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
