@@ -1,4 +1,5 @@
 <?php
+require_once('config.php');
 function getHeader($breadcrumbs) { ?>
 <!DOCTYPE html>
 <html lang="en">

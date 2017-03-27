@@ -1,3 +1,4 @@
+<?php require_once 'config.php'?>
 {{#book}}
 <div class="row">
     <figure class="col-xs-3">
@@ -40,12 +41,18 @@
 <div class="row action-buttons">
 
     <div class="col-md-6">
-        <button onclick="deleteBook()" type="button" class="delete-book btn btn-danger">Delete</button>
+        <?php if (hasPermission("admin")) { ?>
+            <button onclick="deleteBook()" type="button" class="delete-book btn btn-danger">Delete</button>
+        <?php } ?>
     </div>
     <div class="col-md-6 ">
         <div class="pull-right">
-            <button type="button" class="download-book btn btn-primary">Download</button>
+            <?php if (hasPermission("postgrad")) { ?>
+            <a target="_blank" href="/images/placeholder.pdf" type="button" class="download-book btn btn-primary">Download</a>
+            <?php } ?>
+            <?php if (loggedin()) { ?>
             <button onclick="reserveBook()" type="button" class="reserve-book btn btn-primary">Reserve</button>
+            <?php } ?>
         </div>
     </div>
 </div>

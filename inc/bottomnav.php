@@ -14,8 +14,16 @@
                     </a></li>
                 <li><a href="/reservations">Reservations
                     </a></li>
-                <li><a href="/login">Login
-                    </a></li>
+                <li>
+                        <?php
+                            if (loggedin()) {
+                                echo "<a href='#' onclick='logout()'>Logout</a>";
+                            } else {
+                                echo "<a href='/login'>Login</a>";
+                            }
+                        ?>
+
+                    </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->

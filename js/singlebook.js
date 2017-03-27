@@ -1,3 +1,16 @@
+function renderSingleBook() {
+    if (getUrlParameter("isbn") != undefined) {
+        var isbn = getUrlParameter("isbn");
+        var bookObject = getBookByISBN(isbn);
+        $.get('../inc/singleBookTemplate.php', function(template) {
+            var rendered = Mustache.render(template, bookObject);
+            $('.single-book').html(rendered);
+            templateLoaded();
+        });
+    }
+}
+renderSingleBook();
+
 function getBookByISBN(isbn) {
     var database = database = JSON.parse(localStorage.getItem("database"));
     var book = {};
@@ -10,19 +23,6 @@ function getBookByISBN(isbn) {
     stringJson = "{\"book\" : " +stringJson+ "}";
     return JSON.parse(stringJson);
 }
-
-function renderSingleBook() {
-    if (getUrlParameter("isbn") != undefined) {
-        var isbn = getUrlParameter("isbn");
-        var bookObject = getBookByISBN(isbn);
-        $.get('../inc/singleBookTemplate.html', function(template) {
-            var rendered = Mustache.render(template, bookObject);
-            $('.single-book').html(rendered);
-            templateLoaded();
-        });
-    }
-}
-renderSingleBook();
 
 /**
  * Get's the URL value of parameter

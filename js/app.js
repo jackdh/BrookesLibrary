@@ -39,3 +39,10 @@ function makeTemplate(database) {
     });
 }
 
+/**
+ * Global logout so it can be done from anywhere
+ */
+function logout() {
+    document.cookie = 'loggedin=false; path=/'
+    location.reload();
+}
