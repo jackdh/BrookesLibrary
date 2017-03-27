@@ -2,18 +2,11 @@
 // Add to dropdown
 $('#navbar').on('show.bs.collapse', function () {
     $('#navbar').prepend($('#topnav').html());
-});
-
-// When it opens remove from dropdown
-$('#navbar').on('hidden.bs.collapse', function () {
-    $('#navbar .top-nav-content').remove();
-});
-$(window).on('resize', function () {
+}).on('hidden.bs.collapse', function () {
+    $('#navbar').find('.top-nav-content').remove();
+}).on('resize', function () {
     if (window.innerWidth > 768) {$('#navbar').collapse('hide');}
 });
-
-
-
 
 
 /**

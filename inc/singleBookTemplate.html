@@ -9,12 +9,12 @@
         <p>Published: {{publicationDate}}</p>
         <p>ISBN: <span class="isbn">{{ISBN}}</span></p>
 
-        {{#copiesAvailable}}
-        <p>Copies available: {{copiesAvailable}}</p>
-        {{/copiesAvailable}}
-        {{^copiesAvailable}}
+        {{#dueback}}
         <p class="outOfStock">Due back: {{dueback}}</p>
-        {{/copiesAvailable}}
+        {{/dueback}}
+        {{^dueback}}
+        <p>Copies available: {{copiesAvailable}}</p>
+        {{/dueback}}
 
         <p>Location: Wheatly</p>
         <div class="rating-wrapper">
@@ -34,7 +34,7 @@
 <div class="row">
     <div class="col-md-12">
         <h3>Description</h3>
-        <p><p>{{description}}</p></p></div>
+        <p>{{description}}</p></div>
 
 </div>
 <div class="row action-buttons">

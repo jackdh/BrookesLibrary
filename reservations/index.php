@@ -9,17 +9,11 @@
             <div class="col-md-9 col-md-push-3 central">
 
                 <h1>Your Reservations</h1>
-                <div class="border book-case">
-                    <?php
-                    $jsonurl = "../reservations.json";
-                    $json = file_get_contents($jsonurl,0,null,null);
-                    $json_output = json_decode($json);
-                    for ($i = 0; $i < sizeof($json_output); $i++) {
-                    getBook($json_output[$i], $i, true);
-                    }
-                    ?>
-                </div>
+                <div class="border reservations-book-case">
 
+                </div>
+                <a href="#" type="button" class="pagination-btn previous-page btn btn-primary">Previous</a>
+                <button type="button" class="pagination-btn next-page btn btn-primary pull-right">Next</button>
 
             </div>
             <div class="col-md-3 col-md-pull-9">

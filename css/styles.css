@@ -77,24 +77,24 @@ h1 {
   min-width: 100px;
   margin-top: 20px; }
 
-.book-case {
+.book-case, .reservations-book-case {
   max-height: 670px;
   overflow: auto; }
-  .book-case :not(:last-child) {
+  .book-case :not(:last-child), .reservations-book-case :not(:last-child) {
     margin-bottom: 20px; }
-  .book-case .book h2 {
+  .book-case .book h2, .reservations-book-case .book h2 {
     margin-top: 0; }
   @media screen and (max-width: 768px) {
-    .book-case .book img {
+    .book-case .book img, .reservations-book-case .book img {
       max-height: 207px; } }
-  .book-case .book .info p {
+  .book-case .book .info p, .reservations-book-case .book .info p {
     margin-bottom: 0; }
-    .book-case .book .info p:last-child {
+    .book-case .book .info p:last-child, .reservations-book-case .book .info p:last-child {
       margin-top: 20px; }
   @media screen and (min-width: 768px) {
-    .book-case .book .info {
+    .book-case .book .info, .reservations-book-case .book .info {
       padding-left: 0; } }
-  .book-case .outOfStock {
+  .book-case .outOfStock, .reservations-book-case .outOfStock {
     color: #c12e2a;
     font-weight: bold; }
 
@@ -124,6 +124,9 @@ h1 {
   margin-top: 0; }
 #singleBook .action-buttons {
   margin-top: 25px; }
+#singleBook .outOfStock {
+  color: #c12e2a;
+  font-weight: bold; }
 
 .footer {
   background-color: #424a52;

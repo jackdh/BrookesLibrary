@@ -132,7 +132,7 @@ $break-min: 576px;
 }
 
 // Book
-.book-case {
+.book-case, .reservations-book-case  {
   :not(:last-child) {
     margin-bottom: 20px;
   }
@@ -180,6 +180,10 @@ $break-min: 576px;
   }
   .action-buttons {
     margin-top: 25px;
+  }
+  .outOfStock {
+    color: #c12e2a;
+    font-weight: bold;
   }
 
 

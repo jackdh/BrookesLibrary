@@ -1,16 +1,6 @@
-/**
- * Temp Removing of a book.
- */
-function removeBook() {
-    database.books.splice(1, 1);
-    $.get('../inc/booktemplate.html', function(template) {
-        makeTemplate(template);
-    });
-}
-
 function getBookByISBN(isbn) {
     var database = database = JSON.parse(localStorage.getItem("database"));
-    var book;
+    var book = {};
     database.books.forEach(function (entry) {
         if (entry.ISBN === isbn) {
             book = entry;
@@ -52,7 +42,7 @@ function getUrlParameter(sParam) {
             return sParameterName[1] === undefined ? true : sParameterName[1];
         }
     }
-};
+}
 
 /**
  * Starts the star rating for individual book rating page.
@@ -82,14 +72,60 @@ function reserveBook() {
     var isbn = $('.isbn').html();
     // get local storage
     var database = JSON.parse(localStorage.getItem("database"));
+    // check if it is allready reserved
     var inArray = $.inArray(isbn, database.reserved);
+
     if (inArray != -1) {
         // already reserved
     } else {
+        // not reserved so add it.
         database.reserved.push(isbn);
+
+        // Update dueback date.
+        for( i=database.books.length-1; i>=0; i--) {
+            if( database.books[i].ISBN == isbn) {
+                database.books[i].dueback = getReturnDate();
+            }
+        }
+
         localStorage.setItem("database", JSON.stringify(database));
     }
-    checkIfReserved();
+
+    location.reload();
+}
+
+/**
+ * Gets the current date
+ * @returns {string} dd/mm/yyyy
+ */
+function getReturnDate() {
+    var today = new Date();
+    today = addDays(today, 14);
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd='0'+dd
+    }
+
+    if(mm<10) {
+        mm='0'+mm
+    }
+
+    return dd + '/' + mm + '/' + yyyy;
+}
+
+/**
+ *  Adds the library loan days to date
+ * @param date
+ * @param days
+ * @returns {Date}
+ */
+function addDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
 }
 
 /**
@@ -117,4 +153,5 @@ function deleteBook() {
 function templateLoaded() {
     setUpStars();
     checkIfReserved();
+    $('.breadcrumb-end').html($('.info h2').html());
 }

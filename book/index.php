@@ -1,7 +1,7 @@
 <?php
 include '../inc/header.php';
 include 'singleBook.php';
-getHeader("<li><a href=\"/\">Home</a></li><li><a href=\"/search \">Search</a></li><li class=\"active\">Book Title</li>");
+getHeader("<li><a href=\"/\">Home</a></li><li><a href=\"/search \">Search</a></li><li class=\"active breadcrumb-end\"></li>");
 
 
 ?>

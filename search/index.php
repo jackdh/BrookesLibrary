@@ -14,7 +14,7 @@
                 </div>
                 <div>
                     <a href="#" type="button" class="pagination-btn previous-page btn btn-primary">Previous</a>
-                    <button type="button" onclick="removeBook()" class="pagination-btn next-page btn btn-primary pull-right">Next</button>
+                    <button type="button" class="pagination-btn next-page btn btn-primary pull-right">Next</button>
                 </div>
 
 
