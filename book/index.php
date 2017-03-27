@@ -10,8 +10,10 @@ getHeader("<li><a href=\"/\">Home</a></li><li><a href=\"/search \">Search</a></l
         <div class="row">
             <div class="col-md-9 col-md-push-3 central">
 
-                <?php isset($_GET['id']) ? getSingleBook($_GET['id']) : ""; ?>
+                <section class="book single-book">
 
+
+                </section>
 
 
             </div>

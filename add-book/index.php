@@ -1,7 +1,6 @@
 <?php
 include '../inc/header.php';
 getHeader("<li><a href=\"/\">Home</a></li><li class=\"active\">Add Book</li>");
-include 'book.php';
 ?>
 
     <div class="container" id="add-book">
@@ -34,7 +33,7 @@ include 'book.php';
                         Browse&hellip; <input type="file" id="upload" style="display: none;">
                     </span>
                             </label>
-                            <input type="text" class="form-control" readonly>
+                            <input type="text" class="form-control">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary pull-right">Add Book</button>

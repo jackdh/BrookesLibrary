@@ -12,19 +12,37 @@ $(window).on('resize', function () {
     if (window.innerWidth > 768) {$('#navbar').collapse('hide');}
 });
 
-// initiate rating's
-$(document).ready(function() {
-    if ($('.single-book-title')) {
-        $(function(){                   // Start when document ready
-            $('#star-rating').rating(); // Call the rating plugin
+
+
+
+
+/**
+ * Generates the HTML for the books on the search / reservations page.
+ */
+function setupSearchBooks() {
+    var database;
+    if (localStorage.length == 0) {
+        //...
+        $.get('../database.json', function(mydata) {
+            localStorage.setItem("database", JSON.stringify(mydata));
+            database = JSON.parse(localStorage.getItem("database"));
+            makeTemplate(database);
         });
+    } else {
+        database = JSON.parse(localStorage.getItem("database"));
+        makeTemplate(database);
     }
-
-});
-
-
-// Set Pagination for single book
-
-if ($('.single-book-title')) {
-
 }
+setupSearchBooks();
+
+
+/**
+ * Uses Mustache to render the HTML
+ */
+function makeTemplate(database) {
+    $.get('../inc/booktemplate.html', function(template) {
+        var rendered = Mustache.render(template, database);
+        $('.book-case').html(rendered);
+    });
+}
+

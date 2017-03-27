@@ -74,6 +74,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/mustache/mustache.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/singlebook.js"></script>
 <script type="text/javascript" src="../js/rating.js"></script>
 </body>
