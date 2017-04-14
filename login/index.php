@@ -9,11 +9,11 @@ getHeader("<li><a href=\"/\">Home</a></li><li class=\"active\">Login</li>");
                 <h1>Login</h1>
                 <form id="login-form">
                     <div class="form-group">
-                        <label for="title">Username</label>
+                        <label for="username">Username</label>
                         <input type="text" class="form-control" name="username" id="username" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="Author">Password</label>
+                        <label for="password">Password</label>
                         <input type="password" class="form-control" name="password" id="password" placeholder="">
                     </div>
                     <div class="failure-alert alert alert-danger hidden" role="alert"> <strong>Incorrect Password or Username</strong> Please try again. </div>

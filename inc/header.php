@@ -29,7 +29,7 @@ function getHeader($breadcrumbs) { ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img src="../images/logo-print.png">
+                <img alt="Oxford Brookes University" src="../images/logo-print.png">
             </div>
             <div class="col-sm-6">
                 <div id="top-nav-row" class="row">

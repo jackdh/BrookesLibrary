@@ -3,7 +3,7 @@
         <div class="navbar-collapse collapse" id="topnav">
             <div class="top-nav-content">
             <ul class="nav navbar-nav navbar-right">
-                <li ><a href="./">Students <span class="sr-only">(current)</span>
+                <li ><a href="./">Students
                     <span class="caret"></span>
                     </a></li>
                 <li><a href="./">Staff

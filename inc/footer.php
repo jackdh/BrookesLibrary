@@ -1,4 +1,4 @@
-<footer id="#footer" class="footer" role="contentinfo">
+<footer id="#footer" class="footer">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -81,4 +81,5 @@
 <script src="../js/reservations.js"></script>
 <script src="../js/login.js"></script>
 <script type="text/javascript" src="../js/rating.js"></script>
+<script src="../node_modules/bootstrap-validator/dist/validator.min.js"></script>
 </body>
