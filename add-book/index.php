@@ -29,6 +29,10 @@ getHeader("<li><a href=\"/\">Home</a></li><li class=\"active\">Add Book</li>");
                         <input type="text" class="form-control" name="copiesAvailable" id="copiesAvailable" placeholder="">
                     </div>
                     <div class="form-group">
+                        <label for="copiesAvailable">Location</label>
+                        <input type="text" class="form-control" name="location" id="location" placeholder="">
+                    </div>
+                    <div class="form-group">
                         <label for="description">Description</label>
                         <textarea name="description" id="description" class="form-control" rows="3"></textarea>
                     </div>

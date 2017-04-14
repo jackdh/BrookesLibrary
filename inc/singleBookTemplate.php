@@ -13,11 +13,11 @@
         {{#dueback}}
         <p class="outOfStock">Due back: {{dueback}}</p>
         {{/dueback}}
-        {{^dueback}}
+        {{#copiesAvailable}}
         <p>Copies available: {{copiesAvailable}}</p>
-        {{/dueback}}
+        {{/copiesAvailable}}
 
-        <p>Location: Wheatly</p>
+        <p>Location: {{location}}</p>
         <div class="rating-wrapper">
             <p>Rating: </p>
             <div id="star-rating">
@@ -54,9 +54,12 @@
                 <button onclick="reserveBook()" type="button" class="reserve-book btn btn-primary">Reserve</button>
             <?php } ?>
             <?php if (hasPermission("lecturer")) { ?>
-                <button onclick="reserveMultipleBooks()" type="button" class="reserve-book btn btn-primary">Reserve Multiple</button>
+                <button onclick="showReserveMultipleBooks()" type="button" class="reserve-book-multiple btn btn-primary">Reserve Multiple</button>
             <?php } ?>
         </div>
     </div>
 </div>
+{{/book}}
+{{^book}}
+<h2> There are currently no books available</h2>
 {{/book}}

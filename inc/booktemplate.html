@@ -8,11 +8,12 @@
         <p><a href="#" rel="author">{{author}}</a></p>
         <p>Published: {{publicationDate}}</p>
 
+
+        {{#dueback}}
+        <p class="outOfStock">Due back: {{dueback}}</p>
+        {{/dueback}}
         {{#copiesAvailable}}
         <p>Copies available: {{copiesAvailable}}</p>
-        {{/copiesAvailable}}
-        {{^copiesAvailable}}
-        <p class="outOfStock">Next back: {{dueback}}</p>
         {{/copiesAvailable}}
 
         <p>{{description}}</p>
@@ -22,5 +23,5 @@
 </section>
 {{/books}}
 {{^books}}
-<h2>There are no books here!</h2>
+<h2>You have yet to reserve any books.</h2>
 {{/books}}

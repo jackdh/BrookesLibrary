@@ -1,7 +1,7 @@
 <?php
     include '../inc/header.php';
     getHeader("<li><a href=\"/\">Home</a></li><li class=\"active\">Reservations</li>");
-    include '../search/book.php';
+
 ?>
 
     <div class="container" id="search-page">

@@ -1,7 +1,6 @@
 <?php
     include '../inc/header.php';
     getHeader("<li><a href=\"/\">Home</a></li><li class=\"active\">Search</li>");
-    include 'book.php';
 ?>
 
     <div class="container" id="search-page">

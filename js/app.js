@@ -18,8 +18,7 @@ function setupSearchBooks() {
         //...
         $.get('../database.json', function(mydata) {
             localStorage.setItem("database", JSON.stringify(mydata));
-            database = JSON.parse(localStorage.getItem("database"));
-            makeTemplate(database);
+            makeTemplate(mydata);
         });
     } else {
         database = JSON.parse(localStorage.getItem("database"));

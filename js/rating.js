@@ -1,3 +1,4 @@
+
 ;(function($){
     $.fn.rating = function(callback){
 
