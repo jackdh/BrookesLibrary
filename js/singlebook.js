@@ -1,16 +1,26 @@
+/**
+ * If the ISBN is set in the URL and the book exists it will render it's content using
+ * a predefined template in the includes folder.
+ */
 function renderSingleBook() {
-    if (getUrlParameter("isbn") != undefined) {
+    if (getUrlParameter("isbn") !== undefined) {
         var isbn = getUrlParameter("isbn");
         var bookObject = getBookByISBN(isbn);
         $.get('../inc/singleBookTemplate.php', function(template) {
             var rendered = Mustache.render(template, bookObject);
             $('.single-book').html(rendered);
+            $('.book-name').html(bookObject.book.title);
             templateLoaded();
         });
     }
 }
 renderSingleBook();
 
+
+/**
+ * Returns a book object after being given a ISBN number from the local storage.
+ * @param isbn
+ */
 function getBookByISBN(isbn) {
     var database = database = JSON.parse(localStorage.getItem("database"));
     var book = {};
@@ -69,6 +79,8 @@ function checkIfReserved() {
  * Add's a book to the reserved database
  */
 function reserveBook() {
+    $('#reserveSuccessful').modal('show')
+
     var isbn = $('.isbn').html();
     // get local storage
     var database = JSON.parse(localStorage.getItem("database"));
@@ -90,9 +102,22 @@ function reserveBook() {
 
         localStorage.setItem("database", JSON.stringify(database));
     }
-
-    location.reload();
 }
+
+/**
+ * This handles when a lecturer wants to reserve multiple books.
+ */
+function reserveMultipleBooks() {
+
+}
+
+/**
+ * This is fired when the popup modal showing a book has been reserved is dismissed.
+ */
+$('#reserveSuccessful').on('hidden.bs.modal', function (e) {
+    location.reload();
+})
+
 
 /**
  * Gets the current date

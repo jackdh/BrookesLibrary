@@ -48,10 +48,13 @@
     <div class="col-md-6 ">
         <div class="pull-right">
             <?php if (hasPermission("postgrad")) { ?>
-            <a target="_blank" href="/images/placeholder.pdf" type="button" class="download-book btn btn-primary">Download</a>
+                <a target="_blank" href="/images/placeholder.pdf" type="button" class="download-book btn btn-primary">Download</a>
             <?php } ?>
             <?php if (loggedin()) { ?>
-            <button onclick="reserveBook()" type="button" class="reserve-book btn btn-primary">Reserve</button>
+                <button onclick="reserveBook()" type="button" class="reserve-book btn btn-primary">Reserve</button>
+            <?php } ?>
+            <?php if (hasPermission("lecturer")) { ?>
+                <button onclick="reserveMultipleBooks()" type="button" class="reserve-book btn btn-primary">Reserve Multiple</button>
             <?php } ?>
         </div>
     </div>

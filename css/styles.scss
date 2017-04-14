@@ -187,8 +187,11 @@ $break-min: 576px;
   }
 
 
-}
 
+}
+.bold {
+  font-weight: bold;
+}
 // Footer
 
 @import "footer.scss";
