@@ -11,9 +11,7 @@ function getHeader($breadcrumbs) { ?>
     <title>Worlds Best library site!</title>
 
     <!-- Bootstrap -->
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-    <link href="../css/styles.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +50,6 @@ function getHeader($breadcrumbs) { ?>
         <div class="container">
             <!-- TemplateBeginEditable name="breadcrumb_content" -->
             <ol class="breadcrumb">
-                <span class="sr-only">You are here:</span>
                 <?php echo $breadcrumbs; ?>
             </ol>
             <!-- TemplateEndEditable -->

@@ -20,7 +20,7 @@
                 <!-- TemplateBeginEditable name="advanced-footer-col-2" -->
                 <p><a href="http://www.brookes.ac.uk/about-brookes/visit-us/">
                         <img class="img-responsive"
-                             src="//www.brookes.ac.uk/FrontendResources/img/map-homepage.png"
+                             src="../images/map-homepage.png"
                              alt="Oxford Brookes University map"></a>
                 </p>
                 <!-- TemplateEndEditable -->
@@ -68,18 +68,21 @@
         </div>
     </div>
 </footer>
+<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" >
+<link href="../css/styles.css" rel="stylesheet" >
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../node_modules/mustache/mustache.min.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/singlebook.js"></script>
-<script src="../js/addBook.js"></script>
-<script src="../js/reservations.js"></script>
-<script src="../js/login.js"></script>
-<script type="text/javascript" src="../js/rating.js"></script>
-<script src="../node_modules/bootstrap-validator/dist/validator.min.js"></script>
+<script async src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script async src="../node_modules/mustache/mustache.min.js"></script>
+<script async src="../js/app.js"></script>
+<script async src="../js/singlebook.js"></script>
+<script async src="../js/addBook.js"></script>
+<script async src="../js/reservations.js"></script>
+<script async src="../js/login.js"></script>
+<script async type="text/javascript" src="../js/rating.js"></script>
+<script async src="../node_modules/bootstrap-validator/dist/validator.min.js"></script>
 </body>
