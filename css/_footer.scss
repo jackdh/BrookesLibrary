@@ -107,3 +107,17 @@ $black: #000;
     font-size: 30px;
   }
 }
+
+.copywrite {
+  background: #e53935;
+  width: 100%;
+  display: block;
+  .copywrite-inner {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 35px 50px;
+    color: white;
+    font-size: 18px;
+
+  }
+}

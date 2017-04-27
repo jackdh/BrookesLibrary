@@ -67,7 +67,19 @@
             </div>
         </div>
     </div>
+
 </footer>
+<div class="copywrite">
+    <div class="copywrite-inner">
+        <div>
+            Disclaimer: This site has been constructed as coursework for module U08038 Human Computing Interface, at
+            Oxford Brookes University. It is not a working website and is not connected with any site or individual
+            referenced.
+            The views and opinions expressed within these pages are personal and should not be construed as reflecting
+            the views and opinions of Oxford Brookes University.
+        </div>
+    </div>
+</div>
 <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
 <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" >
 <link href="../css/styles.css" rel="stylesheet" >
