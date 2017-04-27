@@ -9,7 +9,7 @@
     if (hasPermission("admin")) {
         ?><a href="/add-book/" class="add-book btn btn-primary btn-lg btn-block">Add Book</a><?php
     }
-    if (hasPermission("postgrad")){
+if (hasPermission("lecturer")) {
         ?> <a href="/request-book/" class="request-book btn btn-primary btn-lg btn-block">Request Book</a><?php
     }
 
