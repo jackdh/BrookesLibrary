@@ -9,11 +9,16 @@
             <div class="col-md-9 col-md-push-3 central">
 
                 <h1>Your Reservations</h1>
-                <div class="border reservations-book-case">
+                <?php if (loggedin()) { ?>
+                    <div class="border reservations-book-case">
 
-                </div>
-                <button type="button" class="pagination-btn previous-page btn btn-primary">Previous</button>
-                <button type="button" class="pagination-btn next-page btn btn-primary pull-right">Next</button>
+                    </div>
+                    <button type="button" class="pagination-btn previous-page btn btn-primary">Previous</button>
+                    <button type="button" class="pagination-btn next-page btn btn-primary pull-right">Next</button>
+                <?php } else { ?>
+                    <p>Please login to see you reservations</p>
+                <?php } ?>
+
 
             </div>
             <div class="col-md-3 col-md-pull-9">
